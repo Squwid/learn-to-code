@@ -1,0 +1,40 @@
+EVERYTHING IS PASSED BY VALUE IN GO
+
+Section 1
+    Compiler puts in semi-colons automatically
+    GoLang.org only std library
+    GoDoc.org all libraries (including third party packages)
+
+Section 2
+    Go workspace
+    One Folder (Any name, any location)
+        bin
+        pkg
+        src
+            github.com
+                <username>
+                    folder with code for project / repo
+                    folder with code for project / repo
+                    folder with code for project / repo
+                    folder with code for project / repo
+
+Section 02:
+    Say exported/unexported instead of public/private
+
+Section 03:
+    Shorthand:
+        can only be used inside func
+    var:
+        zero value
+    Type Format Verb:
+
+Section 06 (Constants):
+    Constant is a parallel type which is not a normal type (ex. int string)
+    Go is statically typed (cant change after run time)
+    There are TYPED and UNTYPED constants
+        const hello = "Hello World" // UNTYPED
+        const typedHello string = "Hello World" // TYPED
+
+
+    x := 42     // UNTYPED
+    y := x + 19 // 
