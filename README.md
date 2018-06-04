@@ -11,3 +11,7 @@ Made to run well in Network environments
 Currently I am learning more about Go, and these are the notes that I am taking as i move along
 
 Thought I would put them on github so I can use them while i work
+
+
+Important things about Go
+Everything in Go is passed "by value" (passed by balue of memory)

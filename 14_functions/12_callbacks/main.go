@@ -1,0 +1,37 @@
+package main
+
+import (
+	"fmt"
+)
+
+func visit(numbers []int, callback func(int)) {
+	k := 0
+	for _, n := range numbers {
+		callback(n)
+		fmt.Println("K: ", k)
+		k++
+	}
+}
+
+func filter(numbers []int, callback func(int) bool) []int {
+	xs := []int{}
+	for _, n := range numbers {
+		if callback(n) {
+			xs = append(xs, n)
+		}
+	}
+	return xs
+}
+
+// callback because its calling back to another function that was made before
+func main() {
+	visit([]int{1, 2, 3, 4}, func(n int) {
+		fmt.Println(n)
+	})
+
+	// Filter part
+	xs := filter([]int{1, 2, 3, 4}, func(n int) bool {
+		return n > 1
+	})
+	fmt.Println(xs) // [2, 3, 4]
+}

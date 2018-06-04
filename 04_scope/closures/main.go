@@ -27,6 +27,15 @@ func main() {
 	increment3 := wrapper()
 	fmt.Println(increment3()) // 1
 	fmt.Println(increment3()) // 2
+
+	d := void()
+	d()
+}
+
+func void() func() {
+	return func() {
+		fmt.Println("Here")
+	}
 }
 
 // P2

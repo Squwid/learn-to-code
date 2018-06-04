@@ -38,3 +38,27 @@ Section 06 (Constants):
 
     x := 42     // UNTYPED
     y := x + 19 // 
+
+Source 09 (Type systems) :
+    Static - Variable types are assigned at compile time
+    Dynamic - Variable types are assigned at run time
+
+Source 10:
+    Don't need break; after switch
+    Control flow - all of the loops/if else/conditions
+
+Source 11:
+    Rune - Character
+    Use '' for rune
+    Rune - Alias for int32
+    Lexical elements: Relating to words or vocabulary of a language
+    25 Keywords in Go
+    int32(64)  == Conversion and NOT Casting
+
+    STRINGS:
+    Raw String - (`string`) Retains spacing
+    Interpreted String - ("string") Removes spacing
+
+Source 14 (Functions):
+    Variadic parameter: pass in 0 or more elements for that func (...float64)int {}
+    
