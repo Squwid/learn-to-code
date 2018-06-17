@@ -15,3 +15,8 @@ Thought I would put them on github so I can use them while i work
 
 Important things about Go
 Everything in Go is passed "by value" (passed by balue of memory)
+
+The "comma ok" idiom
+if seconds, ok := timeZone[tz]; ok {
+    return seconds
+}

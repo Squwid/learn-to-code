@@ -48,7 +48,7 @@ Source 10:
     Control flow - all of the loops/if else/conditions
 
 Source 11:
-    Rune - Character
+    Rune - Character (int32)
     Use '' for rune
     Rune - Alias for int32
     Lexical elements: Relating to words or vocabulary of a language
@@ -61,4 +61,57 @@ Source 11:
 
 Source 14 (Functions):
     Variadic parameter: pass in 0 or more elements for that func (...float64)int {}
+
+Source 17 (Data Structures):
+    Array   - Does not change in size and only 1 type of elements
+    Slice   - VALUE OF UNINIT SLICE IS NIL 
+            - Changes in size (has length & capacity)
+    Map     - VALUE OF UNINIT MAP IS NIL
+
+Source 18 (Slices):
+    Length and Capacity
+    Making a slice - make([]T, length, capacty)
+    Slice is almost equivelent to List in other language
+    Using make() is the idomadic way of creating a new slice
+
+Source 19 (Maps):
+    The value of an unitialized map is NIL
+    Maps are reference types
+    Always make a map
+    Can add a capacity of a map for better hashing and time
+    No elements can be added to a nil map
+
+Source 20 (OOP) : Go IS Object Oriented
+    (1) Encapsulation: (Create our own type)
+    state ("fields")
+    behavior ("methods")
+    exported / un-exported
+
+    (2) Reusability:
+    inheritance ("embedded types")
+
+    (3) Polymorphism:
+    interfaces
+
+    (4) Overriding:
+    "promotion"
+
+    Struct: Sequence of fields (each has a name and type)
+    Anon Field (Embedded field): A field with no name, used for embedding
+
+	INHERITANCE (Reusability)
+
+	Inner type (Person), gets promoted to the outer type (DoubleZero)
+	Outer type now has access to inner type
+    No instatiation of classes. You create a value of a type in Go
+    Struct is a composite type
+    The type has an underlying type which is struct
+
+
+JSON:
+    (1) Encoding:
+    String: Marshal / Unmarshal
+    Stream: Encode / Decode
+
+    
     
