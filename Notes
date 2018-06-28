@@ -1,4 +1,5 @@
 EVERYTHING IS PASSED BY VALUE IN GO
+Make is used for slices maps and channels (things that need to be initialized before use)
 
 Section 1
     Compiler puts in semi-colons automatically
@@ -113,5 +114,33 @@ JSON:
     String: Marshal / Unmarshal
     Stream: Encode / Decode
 
+Interfaces (21) :
+    Most important thing about interfaces 01_interface under 21_interfaces
+    "Square implements Shape interface"
+    Interfaces are just types that just declare behavior
+    Go's interfaces are SATISFIED IMPLICITLY
     
-    
+
+
+Go Routines (22) :
+    Mutex - Mutually exclusive object
+        So multiple program threads can take turns sharing the same resource
+    *Do not communicate by sharing memory; instead, share memory by communicating
+    Sempaphore - Plain variable that is changed
+
+Channels (32) :
+    04_pass-return-channels is extremely helpful when it comes to seeing how go routines work
+    chan T          // BIDIRECTIONAL channel
+    chan<- float64  // can only be used by the user to send channel
+    <-chan int      // can only be used by the user to receive ints
+    Race condition: Go routines writing to the same variable
+    Deadlock: Never going to meet
+    Pipeline:   A design pattern in which the stages connected by channels where each stage is a group of
+                go routines running the same functions
+
+    CONCURRENT DESIGN PATTERNS
+    1. Pipeline
+        Stages connected by channels where each stage is a group of go routines running the same function
+    2. Fan Out - Fan In (Multiplexing)
+        One channel in and lots of funcs reading the channel until its closed
+        One channel out that gets written to by different functions
