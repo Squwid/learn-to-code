@@ -1,5 +1,22 @@
 EVERYTHING IS PASSED BY VALUE IN GO
+
+Overall Notes:
 Make is used for slices maps and channels (things that need to be initialized before use)
+Important things about Go
+Everything in Go is passed "by value" (passed by balue of memory)
+
+The "comma ok" idiom
+if seconds, ok := timeZone[tz]; ok {
+    return seconds
+}
+
+Concurrency vs Parallelism
+Concurrency: Doing multiple things at different times (drinking coffee & coding)
+Parallelism: Doing many things at exactly the same time
+
+Race condition, where two functions add a number or something to the same variable and they both go at the same time, causing only one of them to trigger
+
+Godocs: builtin - things like make() len() copy() close() and stuff like that
 
 Section 1
     Compiler puts in semi-colons automatically
@@ -128,7 +145,7 @@ Go Routines (22) :
     *Do not communicate by sharing memory; instead, share memory by communicating
     Sempaphore - Plain variable that is changed
 
-Channels (32) :
+Channels (23):
     04_pass-return-channels is extremely helpful when it comes to seeing how go routines work
     chan T          // BIDIRECTIONAL channel
     chan<- float64  // can only be used by the user to send channel
@@ -144,3 +161,19 @@ Channels (32) :
     2. Fan Out - Fan In (Multiplexing)
         One channel in and lots of funcs reading the channel until its closed
         One channel out that gets written to by different functions
+    
+    CONCURRENCY RESOURCES
+    1. https://github.com/ardanlabs/gotraining
+    2. https://blog.golang.org/
+
+Error Handling (24):
+    CSP -   Communicating sequential processes 
+            Formal language for describing patterns of interaction in concurrent systems
+    Lint -  Unix utility that flags suspicious usage in software written in any computer language
+    Niladic - Function that takes no arguments 
+    log goes to stdout unless you change the log.SetOutput to a different writer interface
+    Fatalln is equivalent to Println() followed by a call to os.Exit(1)
+    0 means success and non-zero means an error
+    Panic is good if you want to see more of the stack information
+    Prefix error vars with Err
+    PathError is an error that has more options under the cover, such as the file that called it
